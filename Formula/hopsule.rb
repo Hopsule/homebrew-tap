@@ -1,27 +1,22 @@
 class Hopsule < Formula
   desc "Decision & Memory Layer for AI teams"
   homepage "https://github.com/Hopsule/cli-tool"
-  version "0.6.2"
+  url "https://github.com/Hopsule/cli-tool/archive/refs/tags/v0.7.0.tar.gz"
+  sha256 "4f18d3de1a70ef8d52e8b2f4ddef9e40da91c78c8cf76fba825f48e9f80e7ee9"
   license "MIT"
+  head "https://github.com/Hopsule/cli-tool.git", branch: "main"
 
-  on_macos do
-    on_arm do
-      url "https://github.com/Hopsule/cli-tool/releases/download/v0.6.2/decision-darwin-arm64.tar.gz"
-      sha256 "5cdf06dda981a54cb35a3111b1fe5ba248ac5c3ad194f6ff7db0d39a640a7eb8"
-    end
-
-    on_intel do
-      url "https://github.com/Hopsule/cli-tool/releases/download/v0.6.2/decision-darwin-amd64.tar.gz"
-      sha256 "0d260a8bfc75ad4fef22f9f071956fcaea5cbc80df59ce3246537a1a43a5d4b2"
-    end
+  bottle do
+    root_url "https://github.com/Hopsule/cli-tool/releases/download/v0.7.0"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma: "be501b100685968672d74c07acc6c27414cd8ed1d12ab0272b31fa255bdf8978"
+    sha256 cellar: :any_skip_relocation, sonoma:       "bee01483f002795d7f1b93abab5b4776b59bba642571e68b70d960880706b28c"
   end
 
+  depends_on "go" => :build
+
   def install
-    if Hardware::CPU.arm?
-      bin.install "decision-darwin-arm64" => "hopsule"
-    else
-      bin.install "decision-darwin-amd64" => "hopsule"
-    end
+    system "go", "build", *std_go_args(ldflags: "-s -w", output: bin/"hopsule"), "./cmd/decision"
   end
 
   test do
