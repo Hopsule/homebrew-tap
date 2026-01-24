@@ -6,7 +6,7 @@ class Hopsule < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/Hopsule/cli-tool/releases/download/v0.4.2/decision-darwin-arm64.tar.gz"
-      sha256 "59f81cc2e72c1cc63100e68cefaf650bc2d2efdb0805a7c9cc57a2c19c9f66c1"
+      sha256 "4d2305897d0db2ca04bf6a57e2d7e8a2edbfbc2a889f719ea75b776f3ade7edd"
     end
   end
 
