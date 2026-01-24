@@ -1,12 +1,12 @@
 class Hopsule < Formula
-  desc "Decision-first workflow management CLI with monochrome TUI"
+  desc "Decision & Memory Layer for AI teams - Minimal CLI"
   homepage "https://github.com/Hopsule/cli-tool"
-  version "0.3.0"
+  version "0.4.0"
   
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Hopsule/cli-tool/releases/download/v0.3.0/decision-darwin-arm64.tar.gz"
-      sha256 "04dc1040ee87dfafe980159d74b3f4d946743250f466a6c74143115b2377c9ce"
+      url "https://github.com/Hopsule/cli-tool/releases/download/v0.4.0/decision-darwin-arm64.tar.gz"
+      sha256 "95de23ed32013329898b918fd9be753ca72a99fad9dbfad319154221122aedf6"
     end
   end
 
