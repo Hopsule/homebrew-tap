@@ -1,12 +1,12 @@
 class Hopsule < Formula
-  desc "Decision & Memory Layer for AI teams - Minimal CLI"
+  desc "Decision & Memory Layer for AI teams - Compact CLI"
   homepage "https://github.com/Hopsule/cli-tool"
-  version "0.4.3"
+  version "0.4.4"
   
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Hopsule/cli-tool/releases/download/v0.4.3/decision-darwin-arm64.tar.gz"
-      sha256 "8c1b92b24fe28185ff9f18799e4a3a07f7d33eceb6c175d21d65591450343727"
+      url "https://github.com/Hopsule/cli-tool/releases/download/v0.4.4/decision-darwin-arm64.tar.gz"
+      sha256 "64611f913b543e105d85f8f22249e1faadcea284405285a0b3c5f9b68aabe30d"
     end
   end
 
