@@ -11,7 +11,7 @@ class Hopsule < Formula
   end
 
   def install
-    bin.install "decision" => "hopsule"
+    bin.install "decision-darwin-arm64" => "hopsule"
   end
 
   test do
