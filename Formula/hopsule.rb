@@ -8,8 +8,14 @@ class Hopsule < Formula
 
   bottle do
     root_url "https://github.com/Hopsule/cli-tool/releases/download/v0.7.0"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma: "be501b100685968672d74c07acc6c27414cd8ed1d12ab0272b31fa255bdf8978"
-    sha256 cellar: :any_skip_relocation, sonoma:       "bee01483f002795d7f1b93abab5b4776b59bba642571e68b70d960880706b28c"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "be501b100685968672d74c07acc6c27414cd8ed1d12ab0272b31fa255bdf8978"
+    sha256 cellar: :any_skip_relocation, monterey:       "bee01483f002795d7f1b93abab5b4776b59bba642571e68b70d960880706b28c"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "be501b100685968672d74c07acc6c27414cd8ed1d12ab0272b31fa255bdf8978"
+    sha256 cellar: :any_skip_relocation, ventura:        "bee01483f002795d7f1b93abab5b4776b59bba642571e68b70d960880706b28c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "be501b100685968672d74c07acc6c27414cd8ed1d12ab0272b31fa255bdf8978"
+    sha256 cellar: :any_skip_relocation, sonoma:         "bee01483f002795d7f1b93abab5b4776b59bba642571e68b70d960880706b28c"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "be501b100685968672d74c07acc6c27414cd8ed1d12ab0272b31fa255bdf8978"
+    sha256 cellar: :any_skip_relocation, sequoia:        "bee01483f002795d7f1b93abab5b4776b59bba642571e68b70d960880706b28c"
   end
 
   depends_on "go" => :build
