@@ -1,21 +1,21 @@
 class Hopsule < Formula
   desc "Decision & Memory Layer for AI teams"
   homepage "https://github.com/Hopsule/cli-tool"
-  url "https://github.com/Hopsule/cli-tool/archive/refs/tags/v0.7.2.tar.gz"
-  sha256 "bd7bfceb72bf4929944be74c7e2972997972744777e3aa2497fb29949df29c23"
+  url "https://github.com/Hopsule/cli-tool/archive/refs/tags/v0.7.3.tar.gz"
+  sha256 "bd24bf4c9e7e72797e9742ac97e977c7c77eb27274bf729ed29cc247496ef9fa"
   license "MIT"
   head "https://github.com/Hopsule/cli-tool.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/Hopsule/cli-tool/releases/download/v0.7.2"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "c933a393d1487336a47b15887d9f74e32b12bfe8c77c73bc55ee2fd8a74fbd34"
-    sha256 cellar: :any_skip_relocation, monterey:       "ddc271b76ad29ab20b65190cde1ec120b1ba0691e80fef6267c27bcaea65711a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c933a393d1487336a47b15887d9f74e32b12bfe8c77c73bc55ee2fd8a74fbd34"
-    sha256 cellar: :any_skip_relocation, ventura:        "ddc271b76ad29ab20b65190cde1ec120b1ba0691e80fef6267c27bcaea65711a"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "c933a393d1487336a47b15887d9f74e32b12bfe8c77c73bc55ee2fd8a74fbd34"
-    sha256 cellar: :any_skip_relocation, sonoma:         "a3bba2a907310e2b381025dcea63a4efbb5d095b3f3f96b9a7de50052dfaea13"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "c933a393d1487336a47b15887d9f74e32b12bfe8c77c73bc55ee2fd8a74fbd34"
-    sha256 cellar: :any_skip_relocation, sequoia:        "9cc61f953f486b3af69a9f25119b97832fdeb44a1d9b63d8136812bdb41b6dfd"
+    root_url "https://github.com/Hopsule/cli-tool/releases/download/v0.7.3"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ae560c0f544ac6ee488c1c9473780432005dcb044942e9f79c748c96382894d5"
+    sha256 cellar: :any_skip_relocation, monterey:       "b5dedb94ec6b9be58cd44f2bbbee0b1d1c080e09f092c557c95b8f1b8b56e7c2"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "ae560c0f544ac6ee488c1c9473780432005dcb044942e9f79c748c96382894d5"
+    sha256 cellar: :any_skip_relocation, ventura:        "a3e868c93357196803e84c517cf6bf25625b89479b85f2b0ed2d2202b2af8b0e"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "ae560c0f544ac6ee488c1c9473780432005dcb044942e9f79c748c96382894d5"
+    sha256 cellar: :any_skip_relocation, sonoma:         "2595986831dde17dd01ef309be5d3925628e9249965e0796c7848de1fd39101f"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "ae560c0f544ac6ee488c1c9473780432005dcb044942e9f79c748c96382894d5"
+    sha256 cellar: :any_skip_relocation, sequoia:        "a3e868c93357196803e84c517cf6bf25625b89479b85f2b0ed2d2202b2af8b0e"
   end
 
   depends_on "go" => :build
