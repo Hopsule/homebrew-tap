@@ -2,7 +2,7 @@ class Hopsule < Formula
   desc "Decision & Memory Layer for AI teams"
   homepage "https://github.com/Hopsule/cli-tool"
   url "https://github.com/Hopsule/cli-tool/archive/refs/tags/v0.7.4.tar.gz"
-  sha256 "3277e3fb774da277494f92bc49692dd7767da676c72ce22e72f44c4e7ab9743c"
+  sha256 "64d8e515e3f12aa513c9efd5287ebc42bab5aaf20b1f7a11cdb7ca9e9220ac7e"
   license "MIT"
   head "https://github.com/Hopsule/cli-tool.git", branch: "main"
 
