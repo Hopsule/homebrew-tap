@@ -1,12 +1,12 @@
 class Hopsule < Formula
-  desc "Decision-first workflow management CLI"
+  desc "Decision-first workflow management CLI with interactive TUI"
   homepage "https://github.com/Hopsule/cli-tool"
-  version "0.1.1"
+  version "0.2.0"
   
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Hopsule/cli-tool/releases/download/v0.1.1/decision-darwin-arm64.tar.gz"
-      sha256 "20555947c84b8f9fb38492c60f12fa7cba88a9d48f07dce91b714e1b0a61fac7"
+      url "https://github.com/Hopsule/cli-tool/releases/download/v0.2.0/decision-darwin-arm64.tar.gz"
+      sha256 "5973b6ba2b96c317ce196f3cb0ef22bd8a83fc5a4fd249fa93660a18f4af4e61"
     end
   end
 
