@@ -1,12 +1,12 @@
 class Hopsule < Formula
   desc "Decision-first workflow management CLI"
   homepage "https://github.com/Hopsule/cli-tool"
-  version "0.1.0"
+  version "0.1.1"
   
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/Hopsule/cli-tool/releases/download/v0.1.0/decision-darwin-arm64.tar.gz"
-      sha256 "0847f85e7b13d64efb29127356fe78fa651d86de778fd79cb3730a1e62c027c8"
+      url "https://github.com/Hopsule/cli-tool/releases/download/v0.1.1/decision-darwin-arm64.tar.gz"
+      sha256 "20555947c84b8f9fb38492c60f12fa7cba88a9d48f07dce91b714e1b0a61fac7"
     end
   end
 
@@ -15,6 +15,6 @@ class Hopsule < Formula
   end
 
   test do
-    assert_match "hopsule version", shell_output("#{bin}/hopsule --version")
+    assert_match "decision version", shell_output("#{bin}/hopsule --version")
   end
 end
