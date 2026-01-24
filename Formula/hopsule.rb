@@ -1,26 +1,26 @@
 class Hopsule < Formula
-  desc "Decision & Memory Layer for AI teams - Universal Binary"
+  desc "Decision & Memory Layer for AI teams"
   homepage "https://github.com/Hopsule/cli-tool"
   version "0.6.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
+    on_arm do
       url "https://github.com/Hopsule/cli-tool/releases/download/v0.6.1/decision-darwin-arm64.tar.gz"
       sha256 "58acf7c38a2d1f1979f468c2a2af134a75ef84cc89d5847291e82b0242ff67db"
-
-      def install
-        bin.install "decision-darwin-arm64" => "hopsule"
-      end
     end
 
-    if Hardware::CPU.intel?
+    on_intel do
       url "https://github.com/Hopsule/cli-tool/releases/download/v0.6.1/decision-darwin-amd64.tar.gz"
       sha256 "ab11887544fcf0893b8a0f92e37a26f5e9a8fff2342c1a7879907669d71f8138"
+    end
+  end
 
-      def install
-        bin.install "decision-darwin-amd64" => "hopsule"
-      end
+  def install
+    if Hardware::CPU.arm?
+      bin.install "decision-darwin-arm64" => "hopsule"
+    else
+      bin.install "decision-darwin-amd64" => "hopsule"
     end
   end
 
