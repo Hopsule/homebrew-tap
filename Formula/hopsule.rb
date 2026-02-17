@@ -29,8 +29,22 @@ class Hopsule < Formula
     end
   end
 
+  bottle do
+    root_url "https://github.com/Hopsule/cli-tool/releases/download/v0.9.0"
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "37214f141967de856f00ee70dc5bc99d13231a98c5aa1302378f2cccfd52e32c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "15fab6df9f79bca2b48d899770196b84e471d395a365a1b1e231fcc6881b416e"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "b4459783ac5a879f28ffcc204c31b391a891a4c46047acf55a77b75b3aac9021"
+    sha256 cellar: :any_skip_relocation, sequoia:       "da31fa414a70a863b6ab5a8a25d33ec25ee16257cc18bc9946c1e2297c506e65"
+    sha256 cellar: :any_skip_relocation, sonoma:        "89deb365d38984b133c264db599328790d4797b870ad6911a8a70f2aab64011e"
+    sha256 cellar: :any_skip_relocation, ventura:       "6d2d9266cf6f1d4e057f82c8b66ecea175ce99e2208ad87b08cc512028197f09"
+    sha256 cellar: :any_skip_relocation, monterey:      "d967ea51f2627f3e955528fdc1c3b20e099e1e272c7bf72027ec09b19e8af09e"
+  end
+
   def install
     bin.install "hopsule"
+
+    # Shell completions
+    generate_completions_from_executable(bin/"hopsule", "completion")
   end
 
   test do
