@@ -5,21 +5,21 @@
 class Hopsule < Formula
   desc "Decision-first, context-aware, portable memory system CLI"
   homepage "https://hopsule.com"
-  version "0.9.1"
+  version "0.9.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Hopsule/cli-tool/releases/download/v0.9.1/hopsule-darwin-amd64.tar.gz"
-      sha256 "e130a28e67767d80490dde778b5df23d8f8097ce74e4235d75467dab193bafe7"
+      url "https://github.com/Hopsule/cli-tool/releases/download/v0.9.2/hopsule-darwin-amd64.tar.gz"
+      sha256 "4344c89adf6c185d2149ce60e18b5b4778ad7be31f2a7db76ae3877c937769d0"
 
       def install
         bin.install "hopsule"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Hopsule/cli-tool/releases/download/v0.9.1/hopsule-darwin-arm64.tar.gz"
-      sha256 "368cc4e2ab113def6c0e15d22e11916073c537126b6575cb4dc7716e6a706ec3"
+      url "https://github.com/Hopsule/cli-tool/releases/download/v0.9.2/hopsule-darwin-arm64.tar.gz"
+      sha256 "2ecfedfbd702d01fc82c0733fe9dee21400eab94875bb726c6d2a114b29cb1ee"
 
       def install
         bin.install "hopsule"
@@ -29,15 +29,15 @@ class Hopsule < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Hopsule/cli-tool/releases/download/v0.9.1/hopsule-linux-amd64.tar.gz"
-      sha256 "52cb0d59661628157c686f9438888fe72311eaa555cb94831915e2e631ab3531"
+      url "https://github.com/Hopsule/cli-tool/releases/download/v0.9.2/hopsule-linux-amd64.tar.gz"
+      sha256 "b875f9944e4dfe2d6e609bd42b76896e44ce98470f2ff22b90786b81ec3d160c"
       def install
         bin.install "hopsule"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Hopsule/cli-tool/releases/download/v0.9.1/hopsule-linux-arm64.tar.gz"
-      sha256 "1cc05db705d3b1d6e6a00bc7411a18d8c0ad1b5d33e57454a45ff4ebed2853a2"
+      url "https://github.com/Hopsule/cli-tool/releases/download/v0.9.2/hopsule-linux-arm64.tar.gz"
+      sha256 "7003c002bce3ec8d451600a036ac823d511d9e181cb103ac031e9a8330fdae6c"
       def install
         bin.install "hopsule"
       end
